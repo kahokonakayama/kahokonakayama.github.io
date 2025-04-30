@@ -40,7 +40,6 @@ header {
 
 .modal {
   display: none;
-  max-width: 100px
   position: fixed;
   z-index: 999;
   left: 0; top: 0;
