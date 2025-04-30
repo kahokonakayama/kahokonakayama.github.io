@@ -5,18 +5,6 @@ body {
   font-family: "futura", sans-serif;
 }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-    line-height: 1.5;
-    font-family: "futura", sans-serif;
-  }
-
-  .site-title {
-    font-size: 1.2rem;
-  }
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -37,9 +25,10 @@ header {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+  gap: 50px;
   padding: 20px;
+  padding-left: 50px;
 }
 
 .thumbnail {
@@ -60,7 +49,7 @@ header {
 }
 
 .modal-content {
-  max-width: 60%;
+  max-width: 80%;
   margin: 60px auto;
   position: relative;
   text-align: center;
@@ -70,9 +59,6 @@ header {
   display: none;
   width: 100%;
   height: auto;
-  max-width: 100vh; /* 高さに収まるように */
-  max-height: 100vw; /* 幅に収まるように */
-  margin: 0 auto;
 }
 
 .modal .prev, .modal .next {
@@ -103,7 +89,7 @@ header {
   background-color: #00000000;
   color: #333;
   padding: 20px;
-  max-width: 300px;
+  max-width: 600px;
   margin: 20px auto;
 }
 
@@ -120,61 +106,5 @@ header {
   padding-left: 60px;
   margin-top: 40px;
   color: #333;
-}
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-
-  .nav a {
-    padding: 10px 0;
-    margin-left: 0;
-  }
-}
-/* メニュー初期非表示（スマホ用） */
-.menu-toggle {
-  display: none;
-  font-family: "futura", sans-serif;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #fff;
-    flex-direction: column;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-
-  .nav.active {
-    display: flex;
-  }
-
-  .nav a {
-    margin: 10px 0;
-    padding: 10px;
-  }
 }
 
