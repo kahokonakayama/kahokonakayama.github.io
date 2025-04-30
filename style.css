@@ -49,16 +49,17 @@ header {
 }
 
 .modal-content {
-  max-width: 80%;
+  max-width: 60%;
   margin: 60px auto;
   position: relative;
   text-align: center;
 }
 
 .slide {
-  display: none;
+  max-width: 300px;
   width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 .modal .prev, .modal .next {
