@@ -138,6 +138,7 @@ header {
 /* メニュー初期非表示（スマホ用） */
 .menu-toggle {
   display: none;
+  font-family: "futura",sans-serif"
   font-size: 2rem;
   cursor: pointer;
 }
