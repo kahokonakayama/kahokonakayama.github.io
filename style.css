@@ -56,9 +56,11 @@ header {
 }
 
 .slide {
-  max-width: 300px;
-  width: 60%;
+  display: none;
+  width: 100%;
   height: auto;
+  max-width: 100vh; /* 高さに収まるように */
+  max-height: 100vw; /* 幅に収まるように */
   margin: 0 auto;
 }
 
