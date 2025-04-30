@@ -1,12 +1,15 @@
 body {
-  font-size: 16px;
-  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  font-family: "futura", sans-serif;
 }
 
 @media (max-width: 768px) {
   body {
     font-size: 14px;
     line-height: 1.5;
+    font-family: "futura", sans-serif;
   }
 
   .site-title {
@@ -138,7 +141,7 @@ header {
 /* メニュー初期非表示（スマホ用） */
 .menu-toggle {
   display: none;
-  font-family: "futura",sans-serif"
+  font-family: "futura", sans-serif;
   font-size: 2rem;
   cursor: pointer;
 }
