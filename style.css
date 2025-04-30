@@ -135,4 +135,42 @@ header {
     margin-left: 0;
   }
 }
+/* メニュー初期非表示（スマホ用） */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #fff;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav a {
+    margin: 10px 0;
+    padding: 10px;
+  }
+}
 
