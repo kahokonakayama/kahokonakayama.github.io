@@ -10,6 +10,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: fixed;  
+  top: 0;
+  left: 0; 
+  right: 0; 
+  z-index: 1000;  
+  background-color: #fff;  
+}
+
+body {
+  margin-top: 80px; /* ヘッダーが固定されるため、その分下に余白を作る */
+}
+
 }
 
 .site-title {
@@ -18,93 +30,171 @@ header {
 
 .nav a {
   margin-left: 20px;
-  padding: 20px;
+  padding: 10px;
   text-decoration: none;
   color: #333;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
-  gap: 50px;
-  padding: 20px;
-  padding-left: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(150px,150px));
+  gap: 20px;
+  padding: 50px;
 }
 
 .thumbnail {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
   width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
   cursor: pointer;
 }
 
+/* モーダル関連 */
 .modal {
   display: none;
   position: fixed;
   z-index: 999;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(250,250,250,0.8);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
   overflow: auto;
 }
 
 .modal-content {
-  max-width: 80%;
-  margin: 60px auto;
   position: relative;
+  margin: 60px auto;
   text-align: center;
+  max-width: 90%;
 }
 
-.slide {
-  display: none;
-  width: 100%;
+.modal-content img {
+  max-width: 100%;
   height: auto;
-}
-
-.modal .prev, .modal .next {
-  position: absolute;
-  top: 50%;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 10px;
-  transform: translateY(-50%);
-  user-select: none;
-}
-
-.modal .prev { left: 0; }
-.modal .next { right: 0; }
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  background-color: #fff
-  color: #000;
-  font-size: 2rem;
-  cursor: pointer;
+  max-height: 80vh;
 }
 
 .modal-caption {
-  background-color: #00000000;
+  margin-top: 20px;
   color: #333;
-  padding: 20px;
-  max-width: 600px;
-  margin: 20px auto;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  color: #333;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+  transform: translateY(-50%);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .nav a {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+
+  .modal-content {
+    max-width: 95%;
+  }
+
+  .modal-content img {
+    max-height: 60vh;
+  }
+}
+
+.about-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  position: fixed;  
+  top: 0;
+  left: 0; 
+  right: 0; 
+  z-index: 1000;  
+  background-color: #fff;  
 }
 
 .about-page h2 {
   font-size: 0.8rem;
-  padding-left: 60px;
-  margin-top: 40px;
-  color: #333;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .about-page p {
-  line-height: 0.1;
+  margin-bottom: 20px;
   font-size: 0.8rem;
-  padding-left: 60px;
-  margin-top: 40px;
-  color: #333;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
+
+
+/* ハンバーガーメニューの基本スタイル */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+/* ハンバーガーメニューの表示と非表示 */
+.show {
+  display: block;
+}
+
+/* 画面幅が小さい場合にハンバーガーメニューを表示 */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* ハンバーガーアイコンを表示 */
+  }
+
+  .nav {
+    display: none; /* 最初はメニューを非表示 */
+    flex-direction: column; /* メニュー項目を縦に並べる */
+    position: absolute;
+    top: 60px; /* ヘッダーの下に表示 */
+    right: 0;
+    background-color: #00000000;
+    padding: 25px;
+    width: 100%;
+  }
+
+  .nav.show {
+    display: block; /* showクラスが付与されたときにメニューを表示 */
+  }
+
+  .nav a {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+  }
+}
