@@ -2,20 +2,21 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+   <header>
     <h1 class="site-title">NAKAYAMA Kahoko</h1>
+    <div class="hamburger">&#9776;</div>
     <nav class="nav">
       <a href="index.html">Works</a>
       <a href="exhibition.html">Exhibition</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </header>
+ 
+ </header>
   <main>
 　<body class="about-page">
     <h2>略歴</h2>
@@ -47,5 +48,16 @@
     <p>2023年　個展「光のりんかく」（Marco Gallery / 心斎橋）</p>
 
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+
+      hamburger.addEventListener("click", function () {
+        nav.classList.toggle("show");
+      });
+    });
+  </script>
 </body>
 </html>
