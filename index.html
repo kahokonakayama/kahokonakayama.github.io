@@ -2,12 +2,14 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>works</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>作品一覧</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1 class="site-title">NAKAYAMA Kahoko</h1>
+    <div class="hamburger">&#9776;</div>
     <nav class="nav">
       <a href="index.html">Works</a>
       <a href="exhibition.html">Exhibition</a>
@@ -17,232 +19,78 @@
   </header>
 
   <main class="gallery">
-    <!-- ▼ 作品1のサムネイル -->
-    <img src="thumb1.jpg" alt="work 1" class="thumbnail" onclick="openModal('modal1')">
-    <img src="thumb2.jpg" alt="work 2" class="thumbnail" onclick="openModal('modal2')">
-    <img src="thumb3.jpg" alt="work 3" class="thumbnail" onclick="openModal('modal3')">
-    <img src="thumb4.jpg" alt="work 4" class="thumbnail" onclick="openModal('modal4')">
-    <img src="thumb5.jpg" alt="work 5" class="thumbnail" onclick="openModal('modal5')">
-    <img src="thumb6.jpg" alt="work 6" class="thumbnail" onclick="openModal('modal6')">
-    <img src="thumb7.jpg" alt="work 7" class="thumbnail" onclick="openModal('modal7')">
-    <img src="thumb8.jpg" alt="work 8" class="thumbnail" onclick="openModal('modal8')">
-    <img src="thumb9.jpg" alt="work 9" class="thumbnail" onclick="openModal('modal9')">
-    <img src="thumb10.jpg" alt="work 10" class="thumbnail" onclick="openModal('modal10')">
-    <img src="thumb11.jpg" alt="work 11" class="thumbnail" onclick="openModal('modal11')">
-    <img src="thumb12.jpg" alt="work 12" class="thumbnail" onclick="openModal('modal12')">
-    <img src="thumb13.jpg" alt="work 13" class="thumbnail" onclick="openModal('modal13')">
-    <img src="thumb14.jpg" alt="work 14" class="thumbnail" onclick="openModal('modal14')">
-    <img src="thumb15.jpg" alt="work 15" class="thumbnail" onclick="openModal('modal15')">
-    <img src="thumb16.jpg" alt="work 16" class="thumbnail" onclick="openModal('modal16')">
-    <img src="thumb17.jpg" alt="work 17" class="thumbnail" onclick="openModal('modal17')">
-    <img src="thumb18.jpg" alt="work 18" class="thumbnail" onclick="openModal('modal18')">
-    <img src="thumb19.jpg" alt="work 19" class="thumbnail" onclick="openModal('modal19')">
-    <img src="thumb20.jpg" alt="work 20" class="thumbnail" onclick="openModal('modal20')">
-    <img src="thumb21.jpg" alt="work 21" class="thumbnail" onclick="openModal('modal21')">
-    <img src="thumb22.jpg" alt="work 22" class="thumbnail" onclick="openModal('modal22')">
-    <img src="thumb23.jpg" alt="work 23" class="thumbnail" onclick="openModal('modal23')">
-    <img src="thumb24.jpg" alt="work 24" class="thumbnail" onclick="openModal('modal24')">
-    <img src="thumb25.jpg" alt="work 25" class="thumbnail" onclick="openModal('modal25')">
-    <img src="thumb26.jpg" alt="work 26" class="thumbnail" onclick="openModal('modal26')">
-    <img src="thumb27.jpg" alt="work 27" class="thumbnail" onclick="openModal('modal27')">
-    <img src="thumb28.jpg" alt="work 28" class="thumbnail" onclick="openModal('modal28')">
-    <img src="thumb29.jpg" alt="work 29" class="thumbnail" onclick="openModal('modal29')">
-    <img src="thumb30.jpg" alt="work 30" class="thumbnail" onclick="openModal('modal30')">
+    <img src="thumb1.jpg" alt="作品1" class="thumbnail" onclick="openModal(0)">
+    <img src="thumb2.jpg" alt="作品2" class="thumbnail" onclick="openModal(1)">
+    <img src="thumb3.jpg" alt="作品3" class="thumbnail" onclick="openModal(2)">
   </main>
-  
 
-  <!-- ▼ 作品1のモーダル -->
-  <div id="modal1" class="modal">
-    <span class="close" onclick="closeModal('modal1')">&times;</span>
+  <!-- モーダル -->
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
     <div class="modal-content">
-      <img src="thumb1.jpg" class="slide">
-      <img src="detail1-1.jpg" class="slide">
-      <a class="prev" onclick="plusSlides(-1, 'modal1')">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 'modal1')">&#10095;</a>
-    </div>
-    <div class="modal-caption">
-      <h3>plastic dan-pole</h3>
-      <p>2019</p>
-      <p>プラダン、回転台、木材</p>
+      <img id="modal-image" src="" alt="拡大画像">
+      <div class="modal-caption">
+        <h3 id="modal-title"></h3>
+        <p id="modal-text"></p>
+      </div>
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
   </div>
 
-  <!-- ▼ 作品2のモーダル -->
-  <div id="modal2" class="modal">
-    <span class="close" onclick="closeModal('modal2')">&times;</span>
-    <div class="modal-content">
-      <img src="thumb2.jpg" class="slide">
-      <a class="prev" onclick="plusSlides(-1, 'modal2')">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 'modal2')">&#10095;</a>
-    </div>
-    <div class="modal-caption">
-      <h3>作品タイトル 2</h3>
-      <p>これは△△という現象に着目したインスタレーション作品です。</p>
-    </div>
-  </div>
-
-<!-- ▼ 作品3のモーダル -->
-  <div id="modal3" class="modal">
-    <span class="close" onclick="closeModal('modal3')">&times;</span>
-    <div class="modal-content">
-      <img src="thumb3.jpg" class="slide">
-      <img src="thumb4.jpg" class="slide">
-      <img src="thumb5.jpg" class="slide">
-      <img src="thumb6.jpg" class="slide">
-      <img src="thumb7.jpg" class="slide">
-      <a class="prev" onclick="plusSlides(-1, 'modal3')">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 'modal3')">&#10095;</a>
-    </div>
-    <div class="modal-caption">
-      <h3>作品タイトル 3</h3>
-      <p>これは△△という現象に着目したインスタレーション作品です。</p>
-    </div>
-  </div>
-
-<!-- ▼ 作品4のモーダル -->
-  <div id="modal4" class="modal">
-    <span class="close" onclick="closeModal('modal4')">&times;</span>
-    <div class="modal-content">
-      <img src="thumb4.jpg" class="slide">
-      <img src="thumb5.jpg" class="slide">
-      <img src="thumb6.jpg" class="slide">
-      <img src="thumb7.jpg" class="slide">
-      <img src="thumb3.jpg" class="slide">
-      <a class="prev" onclick="plusSlides(-1, 'modal4')">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 'modal4')">&#10095;</a>
-    </div>
-    <div class="modal-caption">
-      <h3>作品タイトル 3</h3>
-      <p>これは△△という現象に着目したインスタレーション作品です。</p>
-    </div>
-  </div>
-
-<!-- ▼ 作品5のモーダル -->
-  <div id="modal5" class="modal">
-    <span class="close" onclick="closeModal('modal5')">&times;</span>
-    <div class="modal-content">
-      <img src="thumb5.jpg" class="slide">
-      <img src="thumb6.jpg" class="slide">
-      <img src="thumb7.jpg" class="slide">
-      <img src="thumb3.jpg" class="slide">
-      <img src="thumb4.jpg" class="slide">
-      <a class="prev" onclick="plusSlides(-1, 'modal5')">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 'modal5')">&#10095;</a>
-    </div>
-    <div class="modal-caption">
-      <h3>作品タイトル 3</h3>
-      <p>これは△△という現象に着目したインスタレーション作品です。</p>
-    </div>
-  </div>
-
-<!-- ▼ 作品6のモーダル -->
-  <div id="modal6" class="modal">
-    <span class="close" onclick="closeModal('modal6')">&times;</span>
-    <div class="modal-content">
-      <img src="thumb6.jpg" class="slide">
-      <img src="thumb7.jpg" class="slide">
-      <img src="thumb3.jpg" class="slide">
-      <img src="thumb4.jpg" class="slide">
-      <img src="thumb5.jpg" class="slide">
-      <a class="prev" onclick="plusSlides(-1, 'modal6')">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 'modal6')">&#10095;</a>
-    </div>
-    <div class="modal-caption">
-      <h3>作品タイトル 3</h3>
-      <p>これは△△という現象に着目したインスタレーション作品です。</p>
-    </div>
-  </div>
-
-<!-- ▼ 作品7のモーダル -->
-  <div id="modal7" class="modal">
-    <span class="close" onclick="closeModal('modal7')">&times;</span>
-    <div class="modal-content">
-      <img src="thumb7.jpg" class="slide">
-      <img src="thumb3.jpg" class="slide">
-      <img src="thumb4.jpg" class="slide">
-      <img src="thumb5.jpg" class="slide">
-      <img src="thumb6.jpg" class="slide">
-      <a class="prev" onclick="plusSlides(-1, 'modal7')">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 'modal7')">&#10095;</a>
-    </div>
-    <div class="modal-caption">
-      <h3>作品タイトル 3</h3>
-      <p>これは△△という現象に着目したインスタレーション作品です。</p>
-    </div>
-  </div>
-
-<!-- ▼ 作品8のモーダル -->
-  <div id="modal8" class="modal">
-    <span class="close" onclick="closeModal('modal8')">&times;</span>
-    <div class="modal-content">
-      <img src="thumb8.jpg" class="slide">
-      <img src="thumb9.jpg" class="slide">
-      <img src="thumb10.jpg" class="slide">
-      <a class="prev" onclick="plusSlides(-1, 'modal8')">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 'modal8')">&#10095;</a>
-    </div>
-    <div class="modal-caption">
-      <h3>作品タイトル 3</h3>
-      <p>これは△△という現象に着目したインスタレーション作品です。</p>
-    </div>
-  </div>
-
-<!-- ▼ 作品9のモーダル -->
-  <div id="modal9" class="modal">
-    <span class="close" onclick="closeModal('modal9')">&times;</span>
-    <div class="modal-content">
-      <img src="thumb9.jpg" class="slide">
-      <img src="thumb10.jpg" class="slide">
-      <img src="thumb8.jpg" class="slide">
-      <a class="prev" onclick="plusSlides(-1, 'modal9')">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 'modal9')">&#10095;</a>
-    </div>
-    <div class="modal-caption">
-      <h3>作品タイトル 3</h3>
-      <p>これは△△という現象に着目したインスタレーション作品です。</p>
-    </div>
-  </div>
-
-<!-- ▼ 作品10のモーダル -->
-  <div id="modal10" class="modal">
-    <span class="close" onclick="closeModal('modal10')">&times;</span>
-    <div class="modal-content">
-      <img src="thumb10.jpg" class="slide">
-      <img src="thumb8.jpg" class="slide">
-      <img src="thumb9.jpg" class="slide">
-      <a class="prev" onclick="plusSlides(-1, 'modal10')">&#10094;</a>
-      <a class="next" onclick="plusSlides(1, 'modal10')">&#10095;</a>
-    </div>
-    <div class="modal-caption">
-      <h3>作品タイトル 3</h3>
-      <p>これは△△という現象に着目したインスタレーション作品です。</p>
-    </div>
-  </div>
-
-  <!-- ▼ JavaScript（モーダルとスライドの制御） -->
   <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = "block";
-      slideIndex[id] = 1;
-      showSlides(1, id);
+    const works = [
+      {
+        image: "thumb1.jpg",
+        title: "作品タイトル1",
+        caption: "この作品は素材Aを使い、○○を表現しています。"
+      },
+      {
+        image: "thumb2.jpg",
+        title: "作品タイトル2",
+        caption: "これは現象Bに着目したインスタレーションです。"
+      },
+      {
+        image: "thumb3.jpg",
+        title: "作品タイトル3",
+        caption: "△△の構造を活かして制作しました。"
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function openModal(index) {
+      currentIndex = index;
+      updateModal();
+      document.getElementById("modal").style.display = "block";
     }
 
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
     }
 
-    let slideIndex = {};
-    function plusSlides(n, modalId) {
-      if (!slideIndex[modalId]) slideIndex[modalId] = 1;
-      showSlides(slideIndex[modalId] += n, modalId);
+    function changeSlide(direction) {
+      currentIndex = (currentIndex + direction + works.length) % works.length;
+      updateModal();
     }
 
-    function showSlides(n, modalId) {
-      const slides = document.querySelectorAll(`#${modalId} .slide`);
-      if (n > slides.length) slideIndex[modalId] = 1;
-      if (n < 1) slideIndex[modalId] = slides.length;
-      slides.forEach((s, i) => s.style.display = (i === slideIndex[modalId] - 1) ? "block" : "none");
+    function updateModal() {
+      const work = works[currentIndex];
+      document.getElementById("modal-image").src = work.image;
+      document.getElementById("modal-title").textContent = work.title;
+      document.getElementById("modal-text").textContent = work.caption;
     }
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+
+      hamburger.addEventListener("click", function () {
+        nav.classList.toggle("show");
+      });
+    });
   </script>
 </body>
 </html>
