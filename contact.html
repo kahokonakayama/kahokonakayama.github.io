@@ -7,15 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+   <header>
     <h1 class="site-title">NAKAYAMA Kahoko</h1>
-    <nav class="nav">
+    <div class="hamburger">&#9776;</div>
+     <nav class="nav">
       <a href="index.html">Works</a>
       <a href="exhibition.html">Exhibition</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
     <form>
     <div style="padding:50px; 100px; 100px; 100px;">
@@ -40,5 +42,17 @@
       <a href="https://instagram.com/">Instagram</a>
     </div>
   </main>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+
+      hamburger.addEventListener("click", function () {
+        nav.classList.toggle("show");
+      });
+    });
+  </script>
+
 </body>
 </html>
