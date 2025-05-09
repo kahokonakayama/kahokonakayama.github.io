@@ -97,12 +97,12 @@ body {
 
 .close {
   position: absolute;
-  top: 50%;
-  color: #333;
+  top: 10px;
+  right: 20px;
   font-size: 2rem;
+  color: #333;
   cursor: pointer;
-  padding: 10px;
-  user-select: none;
+  z-index: 1000;
 }
 
 /* レスポンシブ対応 */
