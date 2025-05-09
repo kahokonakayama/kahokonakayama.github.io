@@ -18,15 +18,7 @@
     </nav>
   </header>
 
-  <main class="gallery">
-    <img src="thumb1.jpg" alt="作品1" class="thumbnail" onclick="openModal(0)">
-    <img src="thumb1-2.jpg" alt="作品1" class="thumbnail" onclick="openModal(0)">
-    <img src="thumb2.jpg" alt="作品2" class="thumbnail" onclick="openModal(1)">
-    <img src="thumb3.jpg" alt="作品3" class="thumbnail" onclick="openModal(2)">
-    <img src="thumb4.jpg" alt="作品4" class="thumbnail" onclick="openModal(3)">
-    <img src="thumb5.jpg" alt="作品5" class="thumbnail" onclick="openModal(4)">
-    <img src="thumb6.jpg" alt="作品6" class="thumbnail" onclick="openModal(5)">
-  </main>
+  <main class="gallery" id="gallery"></main>
   
  <!-- モーダル -->
   <div id="modal" class="modal">
@@ -42,54 +34,85 @@
     </div>
   </div>
 
-  <script>
-    const works = [
-      {
-        image: "thumb1.jpg",
-        title: "作品タイトル1",
-        caption: "この作品は素材Aを使い、○○を表現しています。"
-      },
-      {
-        image: "thumb2.jpg",
-        title: "作品タイトル2",
-        caption: "これは現象Bに着目したインスタレーションです。"
-      },
-      {
-        image: "thumb3.jpg",
-        title: "作品タイトル3",
-        caption: "△△の構造を活かして制作しました。"
-      },
-      {
-        image: "thumb4.jpg",
-        title: "作品タイトル4",
-        caption: "△△の構造を活かして制作しました。"
-      },
-    ];
-
-    let currentIndex = 0;
-
-    function openModal(index) {
-      currentIndex = index;
-      updateModal();
-      document.getElementById("modal").style.display = "block";
+ <script>
+  const works = [
+    {
+      image: "thumb1.jpg",
+      title: "作品タイトル1",
+      caption: "この作品は素材Aを使い、○○を表現しています。"
+    },
+    {
+      image: "thumb2.jpg",
+      title: "作品タイトル2",
+      caption: "これは現象Bに着目したインスタレーションです。"
+    },
+    {
+      image: "thumb3.jpg",
+      title: "作品タイトル3",
+      caption: "△△の構造を活かして制作しました。"
+    },
+    {
+      image: "thumb4.jpg",
+      title: "作品タイトル4",
+      caption: "△△の構造を活かして制作しました。"
+    },
+    {
+      image: "thumb5.jpg",
+      title: "作品タイトル5",
+      caption: "現象Cの変化を観察しています。"
+    },
+    {
+      image: "thumb6.jpg",
+      title: "作品タイトル6",
+      caption: "自然なズレによって構造が現れます。"
     }
+  ];
 
-    function closeModal() {
-      document.getElementById("modal").style.display = "none";
-    }
+  let currentIndex = 0;
 
-    function changeSlide(direction) {
-      currentIndex = (currentIndex + direction + works.length) % works.length;
-      updateModal();
-    }
+  function openModal(index) {
+    currentIndex = index;
+    updateModal();
+    document.getElementById("modal").style.display = "block";
+  }
 
-    function updateModal() {
-      const work = works[currentIndex];
-      document.getElementById("modal-image").src = work.image;
-      document.getElementById("modal-title").textContent = work.title;
-      document.getElementById("modal-text").textContent = work.caption;
-    }
-  </script>
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  function changeSlide(direction) {
+    currentIndex = (currentIndex + direction + works.length) % works.length;
+    updateModal();
+  }
+
+  function updateModal() {
+    const work = works[currentIndex];
+    document.getElementById("modal-image").src = work.image;
+    document.getElementById("modal-title").textContent = work.title;
+    document.getElementById("modal-text").textContent = work.caption;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // ナビメニュー（ハンバーガー用）
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".nav");
+    hamburger.addEventListener("click", function () {
+      nav.classList.toggle("show");
+    });
+
+    // ギャラリー画像を自動生成
+    const gallery = document.getElementById("gallery");
+    works.forEach((work, index) => {
+      const img = document.createElement("img");
+      img.src = work.image;
+      img.alt = work.title;
+      img.className = "thumbnail";
+      img.onclick = () => openModal(index);
+      gallery.appendChild(img);
+    });
+  });
+</script>
+
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
