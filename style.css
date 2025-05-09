@@ -103,7 +103,6 @@ body {
   cursor: pointer;
   padding: 10px;
   user-select: none;
-  transform: translateY(-50%);
 }
 
 /* レスポンシブ対応 */
