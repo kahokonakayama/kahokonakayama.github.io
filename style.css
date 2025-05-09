@@ -102,6 +102,7 @@ body {
   font-size: 2rem;
   color: #333;
   cursor: pointer;
+  padding: 10px;
 }
 
 /* レスポンシブ対応 */
