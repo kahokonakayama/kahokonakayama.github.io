@@ -2,22 +2,29 @@ body {
   background-color: #fff;
   color: #333;
   margin: 0;
-  font-family: sans-serif;  /* 本文の欧文にsans-serifを指定 */
+  font-family: sans-serif;
   margin-top: 80px;
 }
 
-header, .site-title, .nav a {
-  font-family: "futura", sans-serif;  /* header, site-title, nav a にfuturaを指定 */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;  
+  top: 0;
+  left: 0; 
+  right: 0; 
+  z-index: 1000;  
+  background-color: #fff;  
+  font-family: "futura",sans-serif;
+}
+
 }
 
 .site-title {
   font-size: 1.5rem;
-}
-
-
-.nav {
-  display: flex;
-  align-items: center;
+  font-family: "futura",sans-serif;
 }
 
 .nav a {
@@ -25,6 +32,7 @@ header, .site-title, .nav a {
   padding: 10px;
   text-decoration: none;
   color: #333;
+  font-family: "futura",sans-serif;
 }
 
 .gallery {
