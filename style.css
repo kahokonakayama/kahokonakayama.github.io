@@ -2,11 +2,10 @@ body {
   background-color: #fff;
   color: #333;
   margin: 0;
-  font-family: sans-serif;
-  margin-top: 80px;
+  font-family: "futura", sans-serif;
 }
 
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,19 +16,22 @@ body {
   right: 0; 
   z-index: 1000;  
   background-color: #fff;  
-  font-family: "futura",sans-serif;
+}
+
+body {
+  margin-top: 80px; /* ヘッダーが固定されるため、その分下に余白を作る */
+}
+
 }
 
 .site-title {
   font-size: 1.5rem;
-  font-family: "futura",sans-serif;
 }
 
 .nav a {
   margin-left: 20px;
   padding: 10px;
   text-decoration: none;
-  font-family: "futura",sans-serif;
   color: #333;
 }
 
