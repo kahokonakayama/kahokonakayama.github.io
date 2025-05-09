@@ -101,7 +101,6 @@ body {
   color: #333;
   cursor: pointer;
   z-index: 1000;
-  background-color: red; /* 一時的に確認用 */
 }
 
 /* レスポンシブ対応 */
