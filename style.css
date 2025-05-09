@@ -2,7 +2,7 @@ body {
   background-color: #fff;
   color: #333;
   margin: 0;
-  font-family: sans-serif;
+  font-family: sans-serif;  /* 本文はsans-serif */
   margin-top: 80px;
 }
 
@@ -17,14 +17,16 @@ header {
   right: 0; 
   z-index: 1000;  
   background-color: #fff;  
-  font-family: "futura",sans-serif;
-}
-
+  /* font-familyはnavやsite-titleに分離するのでここでは指定しない */
 }
 
 .site-title {
   font-size: 1.5rem;
-  font-family: "futura",sans-serif;
+  font-family: "futura", sans-serif;  /* タイトルだけfutura */
+}
+
+.nav {
+  display: flex;  /* 横並びを保つ */
 }
 
 .nav a {
@@ -32,7 +34,7 @@ header {
   padding: 10px;
   text-decoration: none;
   color: #333;
-  font-family: "futura",sans-serif;
+  font-family: "futura", sans-serif;  /* ナビゲーションだけfutura */
 }
 
 .gallery {
