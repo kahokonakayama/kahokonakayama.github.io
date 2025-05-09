@@ -144,8 +144,6 @@ body {
   margin-bottom: 10px;
 }
 
-
-
 /* ハンバーガーメニューの基本スタイル */
 .hamburger {
   display: none;
@@ -187,6 +185,12 @@ body {
   }
 
   .nav.show {
-    display: flex; /* showクラスが付与されたときにメニューを表示 */
+    display: block; /* showクラスが付与されたときにメニューを表示 */
+  }
+
+  .nav a {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
   }
 }
