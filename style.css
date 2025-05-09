@@ -2,7 +2,7 @@ body {
   background-color: #fff;
   color: #333;
   margin: 0;
-  font-family: "futura", sans-serif;
+  font-family: sans-serif;
   margin-top: 80px;
 }
 
@@ -17,10 +17,12 @@ header {
   right: 0; 
   z-index: 1000;  
   background-color: #fff;  
+  font-family: "futura", sans-serif;
 }
 
 .site-title {
   font-size: 1.5rem;
+  font-family: "futura", sans-serif;
 }
 
 .nav a {
