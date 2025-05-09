@@ -22,7 +22,6 @@ body {
   margin-top: 80px; /* ヘッダーが固定されるため、その分下に余白を作る */
 }
 
-}
 
 .site-title {
   font-size: 1.5rem;
@@ -103,6 +102,7 @@ body {
   color: #333;
   cursor: pointer;
   z-index: 1000;
+  background-color: red; /* 一時的に確認用 */
 }
 
 /* レスポンシブ対応 */
