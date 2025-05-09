@@ -4,9 +4,23 @@
   <meta charset="UTF-8" />
   <title>About</title>
   <link rel="stylesheet" href="style.css" />
+<style>
+    .timeline {
+      display: table;
+      margin-bottom: 50px;
+    }
+    .timeline-row {
+      display: table-row;
+    }
+    .timeline-cell {
+      display: table-cell;
+      padding: 4px 10px;
+      vertical-align: top;
+    }
+  </style>
 </head>
-<body>
-   <header>
+<body class="about-page">
+  <header>
     <h1 class="site-title">NAKAYAMA Kahoko</h1>
     <div class="hamburger">&#9776;</div>
     <nav class="nav">
@@ -15,38 +29,57 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
- 
- </header>
+  </header>
+
   <main>
-　<body class="about-page">
     <h2>略歴</h2>
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-cell">1997年</div>
+        <div class="timeline-cell">山口県生まれ</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-cell">2020年</div>
+        <div class="timeline-cell">筑波大学芸術専門学群 卒業</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-cell">2022年</div>
+        <div class="timeline-cell">筑波大学大学院博士前期課程 修了</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-cell">2022年</div>
+        <div class="timeline-cell">玉川大学芸術学部アート・デザイン学科 助手</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-cell">2023年〜</div>
+        <div class="timeline-cell">武蔵野美術大学基礎デザイン学科 助手</div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-cell">2025年〜</div>
+        <div class="timeline-cell">筑波大学大学院芸術系 博士後期課程</div>
+      </div>
+    </div>
 
-    <p>1997年　　山口県生まれ</p>
-    <p>2020年　　筑波大学芸術専門学群　卒業</p>
-    <p>2022年　　筑波大学人間総合科学学術院芸術学学位プログラム　博士前期課程修了</p>
-    <p>2022年　　玉川大学芸術学部アート・デザイン学科 助手</p>
-    <p>2023年〜　武蔵野美術大学造形学部 基礎デザイン学科 助手</p>
-    <p>2025年〜　筑波大学大学院芸術系 博士後期課程</p>
-   
     <h2>活動歴</h2>
-
-    <p>2018年　筑波大学芸術専門学群構成専攻有志展 （筑波大学総合交流会館 / 茨城県つくば市）</p>
+    <!-- 活動歴はこのままでOKです -->
+    <p>2018年　筑波大学芸術専門学群構成専攻有志展（筑波大学総合交流会館 / 茨城県つくば市）</p>
     <p>2019年　なないろスポーツフェスタ 駅伝部門優勝トロフィー制作、参加記念Tシャツデザイン提供</p>
-    <p>2019年　表現の拡張展 （筑波大学総合交流会館 / 茨城県つくば市）</p>
+    <p>2019年　表現の拡張展（筑波大学総合交流会館 / 茨城県つくば市）</p>
     <p>2019年　筑波大学箱根駅伝復活プロジェクト Tシャツデザイン提供</p>
-    <p>2020年　筑波大学芸術専門学群卒業制作展（つくば市美術館 / 茨城県つくば市）</p>
-    <p>2020年　SICF21 （スパイラル / 表参道）グランプリ</p>
-    <p>2021年　公益財団法人クマ財団クリエイター奨学生 第５期生 採択</p>
-    <p>2021年　SICF21 グランプリアーティスト展「SPOT-視点、回転、発展」（スパイラル / 表参道）</p>
-    <p>2021年　SICF21 Winners Exhibition  （スパイラル / 表参道）</p>
-    <p>2021年　個展「Vary」（千年一日珈琲焙煎所café / 茨城県つくば市）</p>
-    <p>2022年　筑波大学大学院修了制作展 （つくば市美術館 / 茨城県つくば市）優秀作品賞</p>
+    <p>2020年　筑波大学卒業制作展（つくば市美術館 / 茨城県つくば市）</p>
+    <p>2020年　SICF21（スパイラル / 表参道）グランプリ</p>
+    <p>2021年　クマ財団クリエイター奨学生（第5期生）</p>
+    <p>2021年　SICF21グランプリアーティスト展「SPOT-視点、回転、発展」（スパイラル / 表参道）</p>
+    <p>2021年　SICF21 Winners Exhibition（スパイラル / 表参道）</p>
+    <p>2021年　個展「Vary」（千年一日珈琲焙煎所 / 茨城県つくば市）</p>
+    <p>2022年　修了制作展（つくば市美術館）優秀作品賞</p>
     <p>2022年　KUMA EXHIBITION 2022（ANB Tokyo / 六本木）</p>
     <p>2022年　ワークショップ「とりだすかたち」（アートルーム企画室 / 広尾）</p>
     <p>2022年　個展「image」（アートルーム企画室 / 広尾）</p>
     <p>2023年　グループ展「SCENERY」（Marco Gallery / 心斎橋）</p>
     <p>2023年　個展「光のりんかく」（Marco Gallery / 心斎橋）</p>
-
+    <p>2023年　武蔵野美術大学助教・助手展2023（武蔵野美術大学美術館 / 東京都小平市）</p>
+    <p>2024年　武蔵野美術大学助教・助手展2023（武蔵野美術大学美術館 / 東京都小平市）</p>
   </main>
 
   <script>
