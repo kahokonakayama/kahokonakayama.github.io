@@ -175,5 +175,9 @@ header, .site-title, .nav a {
   .nav.show {
     display: flex; /* showクラスが付与されたときにメニューを表示 */
   }
-
+  .nav a {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+  }
 }
