@@ -228,35 +228,28 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    // ナビメニュー（ハンバーガー用）
+    // ハンバーガーメニュー処理（どのページでも共通）
     const hamburger = document.querySelector(".hamburger");
     const nav = document.querySelector(".nav");
-    hamburger.addEventListener("click", function () {
-      nav.classList.toggle("show");
-    });
-
-    // ギャラリー画像を自動生成
-    const gallery = document.getElementById("gallery");
-    works.forEach((work, index) => {
-      const img = document.createElement("img");
-      img.src = work.image;
-      img.alt = work.title;
-      img.className = "thumbnail";
-      img.onclick = () => openModal(index);
-      gallery.appendChild(img);
-    });
-  });
-</script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const hamburger = document.querySelector(".hamburger");
-      const nav = document.querySelector(".nav");
-
+    if (hamburger && nav) {
       hamburger.addEventListener("click", function () {
         nav.classList.toggle("show");
       });
-    });
-  </script>
+    }
+
+    // ギャラリーがあるページ（index.html）でのみ動作
+    const gallery = document.getElementById("gallery");
+    if (gallery) {
+      works.forEach((work, index) => {
+        const img = document.createElement("img");
+        img.src = work.image;
+        img.alt = work.title;
+        img.className = "thumbnail";
+        img.onclick = () => openModal(index);
+        gallery.appendChild(img);
+      });
+    }
+  });
+ </script>
 </body>
 </html>
