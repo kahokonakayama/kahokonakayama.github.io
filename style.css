@@ -22,7 +22,6 @@ body {
   margin-top: 80px; /* ヘッダーが固定されるため、その分下に余白を作る */
 }
 
-
 .site-title {
   font-size: 1.5rem;
 }
