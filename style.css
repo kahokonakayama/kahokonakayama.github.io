@@ -170,7 +170,7 @@ header {
 }
 
 /* 画面幅が小さい場合にハンバーガーメニューを表示 */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .hamburger {
     display: block; /* ハンバーガーアイコンを表示 */
   }
