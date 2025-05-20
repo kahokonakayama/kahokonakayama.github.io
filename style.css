@@ -176,7 +176,7 @@ header {
   }
 
   .nav {
-    display: none; /* 最初はメニューを非表示 */
+    display: none !important; /* 最初はメニューを非表示 */
     flex-direction: column; /* メニュー項目を縦に並べる */
     position: absolute;
     top: 60px; /* ヘッダーの下に表示 */
@@ -187,7 +187,7 @@ header {
   }
 
   .nav.show {
-    display: block; /* showクラスが付与されたときにメニューを表示 */
+    display: flex !important; /* showクラスが付与されたときにメニューを表示 */
   }
 
   .nav a {
