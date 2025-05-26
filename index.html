@@ -199,7 +199,9 @@
     {
       image: "thumb1-2.jpg",
       title: "plastic dan-pole",
-      caption: "2019　180×180×1000mm（10点組）corrugated plastic,turntable　円形に切ったプラダンを積層。規則正しく並んだ孔を通して帯状に透けて見える部分が現れ、上下に移動する"
+      caption: "2019　180×180×1000mm（10点組）corrugated plastic,turntable<br>
+        円形に切ったプラダンを積層。<br>
+        規則正しく並んだ孔を通して帯状に透けて見える部分が現れ、上下に移動する"
     }
   ];
 
@@ -221,11 +223,12 @@
   }
 
   function updateModal() {
-    const work = works[currentIndex];
-    document.getElementById("modal-image").src = work.image;
-    document.getElementById("modal-title").textContent = work.title;
-    document.getElementById("modal-text").textContent = work.caption;
-  }
+  const work = works[currentIndex];
+ 　 document.getElementById("modal-image").src = work.image;
+ 　 document.getElementById("modal-title").textContent = work.title;
+　  document.getElementById("modal-text").innerHTML = work.caption;  // ← 修正
+　}
+
 
   document.addEventListener("DOMContentLoaded", function () {
     // ハンバーガーメニュー処理（どのページでも共通）
