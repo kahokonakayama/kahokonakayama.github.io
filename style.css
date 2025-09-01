@@ -77,9 +77,14 @@ header {
   max-height: 80vh;
 }
 
-.modal-caption {
-  margin-top: 20px;
-  color: #333;
+.modal-caption h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.modal-caption p {
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .prev,
